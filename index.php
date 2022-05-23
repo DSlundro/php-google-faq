@@ -19,8 +19,10 @@ include 'faqs.php';
         <div class="row">
             <div class="col-12">
                 <?php foreach ($faqs as $faq) : ?>
-                    <h2><?=$faq['question']?></h2>
-                    
+                    <h3><?=$faq['question']?></h3>
+                    <?php foreach ($faq['answer'] as $faqA) :?>
+                        <p><?=$faqA?></p>
+                    <?php endforeach?>
                 <?php endforeach?>
             </div>
         </div>
