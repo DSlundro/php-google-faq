@@ -1,6 +1,7 @@
 <?php 
 include './assets/php/faqs.php';
 include './assets/php/navbar.php';
+include './assets/php/footerMenu.php';
 ?>
 <! doctype html>
 <html lang='en'>
@@ -21,12 +22,12 @@ include './assets/php/navbar.php';
         <div class="bg-white">
             <div class="row m-0">
 
-                <div class="col-12 d-flex align-items-center pt-3">
+                <div class="col-12 d-flex align-items-center pt-3 pb-2">
                     <div class="header-img">
                         <img src="./assets/img/logo.png" alt="">
                     </div>
                     <div class="header-text">
-                        <p class="fs-2 m-0 pb-2">Privacy & Termini</p>
+                        <p class="fs-3 m-0 pb-2">Privacy & Termini</p>
                     </div>
                 </div>
 
@@ -57,5 +58,19 @@ include './assets/php/navbar.php';
             </div>
         </div>
     </main>
+
+    <footer>
+        <div class="bg-white">
+            <div class="row m-0 py-3">
+                <div class="col-12">
+                    <ul class="d-flex gap-5 m-0">
+                        <?php foreach ($footerMenu as $list) :?>
+                            <li><?=$list?></li>
+                        <?php endforeach?>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
